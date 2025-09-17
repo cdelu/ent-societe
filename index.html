@@ -117,5 +117,14 @@
     
     <script>__loadEntry()</script>
     
+  <script>
+window.onscroll = function() {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    if (window.FLUTTER_CHANNEL) {
+      window.FLUTTER_CHANNEL.postMessage('scrolled_to_bottom');
+    }
+  }
+};
+</script>  
   </body>
 </html>
